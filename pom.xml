@@ -136,6 +136,26 @@
     </build>
     <profiles>
         <profile>
+            <id>all-modules</id>
+            <modules>
+                <module>spring-boot-admin-server</module>
+                <module>spring-boot-admin-server-ui</module>
+                <module>spring-boot-admin-server-ui-activiti</module>
+                <module>spring-boot-admin-server-ui-hystrix</module>
+                <module>spring-boot-admin-server-ui-turbine</module>
+                <module>spring-boot-admin-server-ui-login</module>
+                <module>spring-boot-admin-samples</module>
+                <module>spring-boot-admin-starter-client</module>
+                <module>spring-boot-admin-docs</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>client-only</id>
+            <modules>
+                <module>spring-boot-admin-starter-client</module>
+            </modules>
+        </profile>
+        <profile>
             <id>sign-artifacts</id>
             <activation>
                 <property>

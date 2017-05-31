@@ -27,6 +27,8 @@
         <build-plugin.asciidoctor.version>1.5.3</build-plugin.asciidoctor.version>
         <build-plugin.exec.version>1.4.0</build-plugin.exec.version>
         <build-plugin.git-commit-id.version>2.2.1</build-plugin.git-commit-id.version>
+        <docker.registry.host>docker-devnet.germanycentral.cloudapp.microsoftazure.de</docker.registry.host>
+        <nexus.url>https://10.0.0.12/nexus</nexus.url>
     </properties>
     <modules>
         <module>spring-boot-admin-server</module>
@@ -207,16 +209,16 @@
         </profile>
     </profiles>
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>ci.nexus3</id>
+            <name>Releases</name>
+            <url>${nexus.url}/repository/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>ci.nexus3</id>
+            <name>Snapshot</name>
+            <url>${nexus.url}/repository/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
     <dependencyManagement>
         <dependencies>

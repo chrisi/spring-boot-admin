@@ -30,17 +30,6 @@
         <docker.registry.host>docker-devnet.germanycentral.cloudapp.microsoftazure.de</docker.registry.host>
         <nexus.url>https://10.0.0.12/nexus</nexus.url>
     </properties>
-    <modules>
-        <module>spring-boot-admin-server</module>
-        <module>spring-boot-admin-server-ui</module>
-        <module>spring-boot-admin-server-ui-activiti</module>
-        <module>spring-boot-admin-server-ui-hystrix</module>
-        <module>spring-boot-admin-server-ui-turbine</module>
-        <module>spring-boot-admin-server-ui-login</module>
-        <module>spring-boot-admin-samples</module>
-        <module>spring-boot-admin-starter-client</module>
-        <module>spring-boot-admin-docs</module>
-    </modules>
     <organization>
         <name>codecentric AG</name>
         <url>http://www.codecentric.de</url>
